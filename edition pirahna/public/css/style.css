@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* Début variables */
+:root {
+  background-color: var(--theme, #3C687F);
+  --theme: #3C687F;
+}
+
+/* Fin variable */
+/* Début reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  min-width: 375px;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fin reset */
+/* Début header */
+.header {
+  margin-bottom: 150px;
+}
+
+.header .container-fluid {
+  height: 150px;
+  background-color: var(--theme);
+}
+
+.header .container-fluid .row {
+  height: 150%;
+  position: relative;
+}
+
+.header .container-fluid .row .header__search-bar {
+  border-radius: 2rem;
+  -webkit-box-shadow: 10px 10px 10px black;
+          box-shadow: 10px 10px 10px black;
+}
+
+.header .container-fluid .row .header__logo-title {
+  color: #ec1d25;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 25%);
+          transform: translate(-50%, 25%);
+}
+
+.header .container-fluid .row .header__logo-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  height: 150px;
+}
+
+.header .container-fluid .row .header__list-social-network {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header .container-fluid .row .header__list-social-network img {
+  width: 40px;
+  height: auto;
+  margin: 0 12px;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: -10px 10px 10px black;
+          box-shadow: -10px 10px 10px black;
+}
+
+@media (max-width: 575.98px) {
+  .header .header__list-social-network {
+    margin-left: 15px;
+  }
+  .header .header__form {
+    margin-right: 15px;
+  }
+  .header .header__list-social-network, .header .header__form {
+    margin-top: 240px !important;
+  }
+}
+
+/* Début nav */
+.container-fluid .navbar {
+  background-color: var(--theme);
+}
+
+.container-fluid .navbar .hamburger-icon {
+  height: 40px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+/* Fin nav */
+/* Fin header */
+/* Début footer */
+.footer {
+  background-color: var(--theme);
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 150px;
+}
+
+/* Fin footer */
+/*# sourceMappingURL=style.css.map */
