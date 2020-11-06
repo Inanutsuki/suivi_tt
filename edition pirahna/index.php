@@ -22,4 +22,7 @@ switch ($action) {
     case "home":
         $ctrl->home();
         break;
+    case "catalog":
+        $ctrl->catalog();
+        break;
 }

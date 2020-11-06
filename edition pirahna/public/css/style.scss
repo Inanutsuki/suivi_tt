@@ -37,14 +37,14 @@ body {
 /* Début header */
 
 .header {
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 
     .container-fluid {
         height: 150px;
         background-color: var(--theme);
 
         .row {
-            height: 150%;
+            height: 150px;
             position: relative;
 
             .header__ {
@@ -76,6 +76,14 @@ body {
                         margin: 0;
                         padding: 0;
 
+                        .social-network:first-child img {
+                            margin-left: 0 !important;
+                        }
+
+                        .social-network:last-child img {
+                            margin-right: 0 !important;
+                        }
+
                         img {
                             width: 40px;
                             height: auto;
@@ -106,7 +114,7 @@ body {
 
             &__list-social-network,
             &__form {
-                margin-top: 240px !important;
+                margin-top: 220px !important;
             }
         }
     }
@@ -117,6 +125,22 @@ body {
 .container-fluid {
     .navbar {
         background-color: var(--theme);
+
+        .navbar {
+            &-collapse {
+                justify-content: center;
+            }
+
+            &-nav {
+                .nav-item {
+                    color: #fff;
+                }
+
+                .active {
+                    color: #ec1d25;
+                }
+            }
+        }
 
         .hamburger-icon {
             height: 40px;
@@ -139,6 +163,14 @@ body {
     bottom: 0;
     width: 100vw;
     height: 150px;
+
+    .row {
+        justify-content: center;
+
+        p {
+            color: #79a4af;
+        }
+    }
 }
 
 /* Fin footer */
