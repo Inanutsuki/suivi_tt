@@ -6,3 +6,6 @@
     Début tt
 
     16h30 fin tt
+06/11/2020
+    08h00
+    Début du tt
