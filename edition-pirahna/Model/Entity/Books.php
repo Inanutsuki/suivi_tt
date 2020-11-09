@@ -2,6 +2,8 @@
 
 namespace App\Model\Entity;
 
+use DateTime;
+
 class Books
 {
     // Attributs
@@ -9,7 +11,8 @@ class Books
     protected $_id;
     protected $_title;
     protected $_bookLink;
-    protected $_author;
+    protected $_authorName;
+    protected $_translator;
     protected $_releaseDate;
     protected $_abstract;
     protected $_backCover;
@@ -72,9 +75,14 @@ class Books
         return $this->_bookLink;
     }
 
-    public function author()
+    public function authorName()
     {
-        return $this->_author;
+        return $this->_authorName;
+    }
+
+    public function translator()
+    {
+        return $this->_translator;
     }
 
     public function releaseDate()
@@ -123,16 +131,25 @@ class Books
         }
     }
 
-    public function setAuthor($author)
+    public function setAuthorName($authorName)
     {
-        if (!is_string($author) || empty($author)) {
+        if (!is_string($authorName) || empty($authorName)) {
             $this->errors[] = self::AUTEUR_INVALIDE;
         } else {
-            $this->_author = $author;
+            $this->_authorName = $authorName;
         }
     }
 
-    public function setReleaseDate($releaseDate)
+    public function setTranslator($translator)
+    {
+        if (!is_string($translator) || empty($translator)) {
+            $this->errors[] = self::AUTEUR_INVALIDE;
+        } else {
+            $this->_translator = $translator;
+        }
+    }
+
+    public function setReleaseDate(DateTime $releaseDate)
     {
         $this->_releaseDate = $releaseDate;
     }

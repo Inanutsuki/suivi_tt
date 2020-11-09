@@ -6,7 +6,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link active">ACCUEIL</a>
+                <a href="index.php?action=home" class="nav-item nav-link">ACCUEIL</a>
                 <a href="#" class="nav-item nav-link">NOUVEAUTÉS</a>
                 <a href="index.php?action=catalog" class="nav-item nav-link">CATALOGUE</a>
                 <a href="#" class="nav-item nav-link">AUTEURS/TRADUCTEURS</a>

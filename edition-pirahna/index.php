@@ -25,4 +25,7 @@ switch ($action) {
     case "catalog":
         $ctrl->catalog();
         break;
+    case "book":
+        $ctrl->book();
+        break;
 }

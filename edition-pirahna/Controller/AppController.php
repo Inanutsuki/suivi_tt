@@ -21,12 +21,25 @@ class AppController extends BaseController
     {
         $db = DatabasePDO::dbConnect();
         $booksManager = new BooksManager($db);
-        $booksInfos = $booksManager->getBooksInfos();
+        $booksList = $booksManager->getBooksList();
         $title = "Catalogue";
         $data = [
             'title' => $title,
-            'booksInfos' => $booksInfos,
+            'booksList' => $booksList,
         ];
         $this->render("catalog.html.php", $data);
+    }
+
+    public function book()
+    {
+        $db = DatabasePDO::dbConnect();
+        $booksManager = new BooksManager($db);
+        $book = $booksManager->getBookInfos($_GET['id']);
+        $title = $book->title();
+        $data = [
+            'title' => $title,
+            'book' => $book,
+        ];
+        $this->render("book.html.php", $data);
     }
 }
